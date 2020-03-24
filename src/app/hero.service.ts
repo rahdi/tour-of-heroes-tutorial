@@ -16,11 +16,13 @@ export class HeroService {
     private http: HttpClient
   ) { }
 
+  private heroesUrl = 'api/heroes';  // URL to web api
+  
   /** Log a HeroService message with the MessageService */
   private log(message: string) {
     this.messageService.add(`HeroService: ${message}`);
   }
-  
+
   getHeroes(): Observable<Hero[]> {
     // TODO: send the message _after_ fetching the heroes
     return of(HEROES);
