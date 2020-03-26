@@ -4,7 +4,8 @@
     <input #heroName />
   </label>
   <!-- (click) passes input value to add() and then clears the input -->
-  <button (click)="add(heroName.value); heroName.value=''">
+  <button title="add hero" 
+  (click)="add(heroName.value); heroName.value=''">
     add
   </button>
 </div>
